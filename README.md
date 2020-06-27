@@ -3,13 +3,17 @@
 List of codes
 
 The list is separated by kind.
+
 Informational 1xx
+
 •	100 - Continue - Client should continue with request.
 •	101 - Switching Protocols - Server is switching protocols.
 •	102 - Processing - Server has received and is processing the request.
 •	103 - Processing - Server has received and is processing the request.
 •	122 - Request-uri too long - URI is longer than a maximum of 2083 characters.
+
 Success 2xx
+
 These codes indicate success. The body section if present is the object returned by the request. It is a MIME format object. It is in MIME format, and may only be in text/plain, text/html or one fo the formats specified as acceptable in the request.
 •	200 - Ok - The request was fulfilled.
 •	201 - Created - Following a POST command, this indicates success, but the textual part of the response line indicates the URI by which the newly created document should be known.
@@ -21,7 +25,9 @@ These codes indicate success. The body section if present is the object returned
 •	207 - Multi-Status - XML, can contain multiple separate responses.
 •	208 - Already Reported - results previously returned.
 •	226 - Im Used - request fulfilled, reponse is instance-manipulations.
+
 Redirection 3xx
+
 The codes in this section indicate action to be taken (normally automatically) by the client in order to fulfill the request.
 •	301 - Moved - The data requested has been assigned a new URI, the change is permanent. (N.B. this is an optimisation, which must, pragmatically, be included in this definition. Browsers with link editing capabiliy should automatically relink to the new reference, where possible)
 •	302 - Found - The data requested actually resides under a different URL, however, the redirection may be altered on occasion (when making links to these kinds of document, the browser should default to using the Udi of the redirection document, but have the option of linking to the final document) as for "Forward".
@@ -31,7 +37,9 @@ The codes in this section indicate action to be taken (normally automatically) b
 •	306 - Switch Proxy - Subsequent requests should use the specified proxy.
 •	307 - Temporary Redirect - Connect again to different URI as provided.
 •	308 - Permanent Redirect - Connect again to a different URI using the same method.
+
 Client side errors 4xx
+
 The 4xx codes are intended for cases in which the client seems to have erred, and the 5xx codes for the cases in which the server is aware that the server has erred. It is impossible to distinguish these cases in general, so the difference is only informational.
 The body section may contain a document describing the error in human readable form. The document is in MIME format, and may only be in text/plain, text/html or one for the formats specified as acceptable in the request.
 •	400 - Bad Request - The request had bad syntax or was inherently impossible to be satisfied.
@@ -67,7 +75,9 @@ The body section may contain a document describing the error in human readable f
 •	450 - Blocked By Windows Parental Controls - Windows Parental Controls blocking access to webpage.
 •	451 - Wrong Exchange Server - The server cannot reach the client's mailbox.
 •	499 - Client Closed Request - Connection closed by client while HTTP server is processing.
+
 Server side error 5xx
+
 This means that even though the request appeared to be valid something went wrong at the server level and it wasn’t able to return anything.
 •	500 - Internal Error - The server encountered an unexpected condition which prevented it from fulfilling the request.
 •	501 - Not Implemented - The server does not support the facility required.
